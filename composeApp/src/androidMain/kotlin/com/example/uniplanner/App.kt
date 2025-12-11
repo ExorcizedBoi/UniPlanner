@@ -34,7 +34,6 @@ fun App() {
     val scope = rememberCoroutineScope()
     var pantallaActual by remember { mutableStateOf(Pantalla.HOME) }
 
-    // Estado del Tema (Oscuro/Claro)
     var esOscuro by remember { mutableStateOf(false) }
     val colores = if (esOscuro) darkColorScheme() else lightColorScheme()
 

@@ -13,8 +13,6 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
 
-        // Forzamos el idioma a Español-Chile (es-CL) para toda la app.
-        // Esto arregla el formato de fecha (dd/MM/yyyy) y los textos del calendario.
         val locale = Locale("es", "CL")
         Locale.setDefault(locale)
         val config = resources.configuration

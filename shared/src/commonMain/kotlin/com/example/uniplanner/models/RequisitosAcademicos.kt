@@ -6,7 +6,6 @@ abstract class RequisitosAcademicos(
     val prerrequisitos: List<String>
 ) : DatosAcademicos {
 
-    // Lógica compartida para verificar si cumpliste los prerrequisitos
     protected fun requisitosCumplidos(historial: List<Resultado>): Boolean {
         if (prerrequisitos.isEmpty()) return true
 

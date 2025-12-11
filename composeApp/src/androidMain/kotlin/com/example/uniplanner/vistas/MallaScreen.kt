@@ -183,7 +183,7 @@ fun ColumnSemestre(numero: Int, materias: List<MateriaVisual>, onClick: (String)
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(bottom = 8.dp).fillMaxWidth(),
             textAlign = TextAlign.Center,
-            color = MaterialTheme.colorScheme.onBackground // Color texto adaptativo
+            color = MaterialTheme.colorScheme.onBackground
         )
 
         materias.forEach { visual ->
@@ -208,7 +208,6 @@ fun CardMateria(visual: MateriaVisual, onClick: (String) -> Unit) {
 
     val colorBorde = if (visual.esCritico) Color.Red else Color.Transparent
     val grosorBorde = if (visual.esCritico) 2.dp else 0.dp
-    // El texto dentro de las tarjetas de colores mantiene negro o blanco según el fondo fijo
     val colorTexto = if (visual.estado == EstadoMateria.BLOQUEADO || visual.esCritico) Color.Black else Color.White
     val esHito = materia is Modulos
 

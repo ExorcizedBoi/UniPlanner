@@ -37,7 +37,6 @@ fun HomeScreen(
     val porcentajeAvance = if (totalCreditos > 0) creditosAprobados.toFloat() / totalCreditos.toFloat() else 0f
 
     Scaffold(
-        // --- AQUÍ ESTÁ LA SOLUCIÓN: DEVOLVEMOS LA BARRA SUPERIOR ---
         topBar = {
             CenterAlignedTopAppBar(
                 title = { Text("Inicio", fontWeight = FontWeight.Bold) },
@@ -52,7 +51,6 @@ fun HomeScreen(
                 )
             )
         }
-        // -----------------------------------------------------------
     ) { innerPadding ->
         Column(
             modifier = Modifier
@@ -81,7 +79,6 @@ fun HomeScreen(
 
             Spacer(modifier = Modifier.height(32.dp))
 
-            // --- TARJETA DE AVANCE ---
             Card(
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
                 elevation = CardDefaults.cardElevation(4.dp),

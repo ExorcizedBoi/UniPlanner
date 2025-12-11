@@ -5,8 +5,6 @@ import com.example.uniplanner.models.Modulos
 import com.example.uniplanner.models.RequisitosAcademicos
 
 object MallaData {
-    // Polimorfismo: La lista es de la clase padre 'RequisitosAcademicos',
-    // pero contiene hijos 'Ramo' y 'Modulos'.
     val listaMaterias: List<RequisitosAcademicos> = listOf(
         // SEMESTRE 1
         Ramo("INF-111", "Álgebra I", 8, false, emptyList(), 1),
@@ -36,7 +34,6 @@ object MallaData {
         Ramo("INF-223", "Progra. Avanzada", 5, false, listOf("INF-213"), 4),
         Ramo("INF-224", "Lógica Comp.", 4, true, listOf("INF-111"), 4),
         Ramo("INF-225", "Arq. Computadores", 5, true, listOf("INF-215"), 4),
-        // Aquí usamos Modulos para un Hito importante
         Modulos("INF-226", "Modulo integrador (Hito I)", 100, listOf("INF-212", "INF-213", "INF-215"), 4),
 
         // SEMESTRE 5
@@ -63,7 +60,6 @@ object MallaData {
         Ramo("INF-415", "Redes y Datos", 6, true, listOf("INF-325"), 7),
 
         // SEMESTRE 8
-        // Otro uso de Modulos: Licenciatura requiere muchos créditos acumulados (ej: 200)
         Modulos("INF-421", "Mód. Int. Licenciatura", 200, listOf("INF-411","INF-412","INF-413", "INF-414", "INF-415"), 8),
         Ramo("INF-422", "Contab. y Finanzas", 4, true, listOf("INF-412"), 8),
         Ramo("INF-423", "Int. Artificial", 4, true, listOf("INF-413"), 8),
@@ -90,7 +86,7 @@ object MallaData {
         // SEMESTRE 11
         Ramo("INF-611", "Electivo II", 5, true, listOf("INF-421"), 11),
         Ramo("INF-612", "Electivo III", 5, true, listOf("INF-421"), 11),
-        // La Práctica: Requiere haber acumulado casi toda la carrera (ej: 300 créditos)
+        // La Práctica: Requiere haber acumulado casi toda la carrera
         Modulos("INF-613", "Práctica Profesional", 300, listOf("INF-524", "INF-522"), 11)
     )
 }

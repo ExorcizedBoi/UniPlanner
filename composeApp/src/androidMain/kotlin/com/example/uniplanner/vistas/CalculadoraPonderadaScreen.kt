@@ -26,7 +26,7 @@ data class FilaNota(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CalculadoraScreen(
-    onMenuClick: () -> Unit // Recibimos la acción del menú
+    onMenuClick: () -> Unit
 ) {
     var listaNotas by remember {
         mutableStateOf(listOf(FilaNota(1), FilaNota(2), FilaNota(3)))
@@ -184,7 +184,6 @@ fun CalculadoraScreen(
 
             Spacer(modifier = Modifier.height(8.dp))
 
-            // --- RESULTADOS ---
             if (promedioResultado != null || mensajeError.isNotEmpty()) {
                 Card(
                     colors = CardDefaults.cardColors(
@@ -210,8 +209,6 @@ fun CalculadoraScreen(
                     }
                 }
             }
-
-            // ELIMINADO: Botón "Volver al Inicio" (ya no se usa)
         }
     }
 }

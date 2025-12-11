@@ -14,7 +14,6 @@ class Ramo(
 
         return when {
             resultado?.aprobado == true -> EstadoMateria.APROBADA
-            // Si existe resultado pero no está aprobado, se bloquea (rojo)
             resultado != null && !resultado.aprobado -> EstadoMateria.BLOQUEADO
             requisitosCumplidos(historial) -> EstadoMateria.DISPONIBLE
             else -> EstadoMateria.BLOQUEADO
