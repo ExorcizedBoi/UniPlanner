@@ -36,8 +36,10 @@ Desarrollada con **Kotlin Multiplatform** y **Material 3**.
 - **Modo Oscuro:** Soporte para tema Claro/Oscuro en toda la aplicación.
 - **Gestión de Datos:** Opción de "Reiniciar Carrera" para borrar todo el historial académico y comenzar desde cero.
 
-## 6. Frases motivacionales 
-- Implementacion de frases para lograr levantar el animos.
+## 6. Horario interactivo
+- **Visualización semanal:** Un calendario intuitivo de lunes a viernes.
+- **Personalización total:** Crea bloques de clases definiendo hora de inicio y final.
+- **Gestión:** Agrega y elimina clases fácilmente para ajustar tu semestre.
 
 -----------------------------------------------------------------------------------------------------------
 

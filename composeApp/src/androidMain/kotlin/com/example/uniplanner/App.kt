@@ -20,11 +20,13 @@ import com.example.uniplanner.vistas.MallaScreen
 import com.example.uniplanner.vistas.EvaluacionesScreen
 import com.example.uniplanner.vistas.AjustesScreen
 import com.example.uniplanner.vistas.MetodosEstudioScreen
+import com.example.uniplanner.vistas.HorarioScreen
 import kotlinx.coroutines.launch
 
 enum class Pantalla {
     HOME,
     EVALUACIONES,
+    HORARIO,
     MALLA,
     METODOS,
     CALCULADORA,
@@ -75,6 +77,17 @@ fun App() {
                         modifier = Modifier.padding(NavigationDrawerItemDefaults.ItemPadding)
                     )
 
+                    NavigationDrawerItem(
+                        label = { Text("Horario") },
+                        selected = pantallaActual == Pantalla.HORARIO,
+                        icon = { Icon(Icons.Filled.DateRange, null) },
+                        onClick = {
+                            pantallaActual = Pantalla.HORARIO
+                            scope.launch { drawerState.close() }
+                        },
+                        modifier = Modifier.padding(NavigationDrawerItemDefaults.ItemPadding)
+                    )
+
                     HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
 
                     NavigationDrawerItem(
@@ -113,7 +126,6 @@ fun App() {
                     Spacer(modifier = Modifier.weight(1f))
                     HorizontalDivider()
 
-                    // 6. AJUSTES
                     NavigationDrawerItem(
                         label = { Text("Ajustes") },
                         selected = pantallaActual == Pantalla.AJUSTES,
@@ -135,8 +147,9 @@ fun App() {
                 when (pantallaActual) {
                     Pantalla.HOME -> HomeScreen(onMenuClick = { scope.launch { drawerState.open() } })
                     Pantalla.EVALUACIONES -> EvaluacionesScreen(onMenuClick = { scope.launch { drawerState.open() } })
+                    Pantalla.HORARIO -> HorarioScreen(onMenuClick = { scope.launch { drawerState.open() } })
                     Pantalla.MALLA -> MallaScreen(onMenuClick = { scope.launch { drawerState.open() } })
-                    Pantalla.METODOS -> MetodosEstudioScreen(onMenuClick = { scope.launch { drawerState.open() } }) // Nuevo Case
+                    Pantalla.METODOS -> MetodosEstudioScreen(onMenuClick = { scope.launch { drawerState.open() } })
                     Pantalla.CALCULADORA -> CalculadoraScreen(onMenuClick = { scope.launch { drawerState.open() } })
                     Pantalla.AJUSTES -> AjustesScreen(
                         onMenuClick = { scope.launch { drawerState.open() } },

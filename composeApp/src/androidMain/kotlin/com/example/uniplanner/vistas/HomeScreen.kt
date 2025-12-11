@@ -39,15 +39,16 @@ fun HomeScreen(
 
     val listaFrases = remember {
         listOf(
-            "El ayer es Historia, el Mañana es un misterio, pero el Hoy es un obsequio - Maestro Oogway",
+            "El ayer es Historia, el Mañana es un misterio, pero el Hoy es un obsequio \n - Maestro Oogway",
             "Si funciona, no lo toques",
-            "nunca te vayas a dormir pensando que hubiera pasado si, levantate, ve y hacelo - Gerónimo Benavides",
+            "nunca te vayas a dormir pensando que hubiera pasado si, levantate, ve y hacelo \n - Gerónimo Benavides (el momo)",
             "El único código libre de errores es el que no se ha escrito.",
             "los días malos son para que sepas valorar los buenos.",
-            "nunca te rindas loco...Hoy es difícil y mañana va a ser pero, pero pasado lo vas a disfruta - Joker",
+            "nunca te rindas loco...Hoy es difícil y mañana va a ser pero, pero pasado lo vas a disfruta\n - Joker",
             "No todos los dias te vas a sentir de la mejor manera, pero recuerda que estas haciendo lo que puedes y debes estar orgulloso de eso",
             "Cada dia sera mas fácil, pero tienes que hacerlo todos los dias. Esa es la parte difícil",
-            "Para que vas a estudiar para una materia, si pensás en desaprobarla, Flaco el mundo es para los que se animan y creen que es posible - Gerónimo Benavides",
+            "Ponte a estudiar que luego andas llorando",
+            "Para que vas a estudiar para una materia, si pensás en desaprobarla, Flaco el mundo es para los que se animan y creen que es posible\n - Gerónimo Benavides (el momo)",
         )
     }
 
