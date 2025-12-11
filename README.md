@@ -1,6 +1,6 @@
-#   UniPlanner 
+#   UniPlanner
 
-**UniPlanner** es una aplicación móvil diseñada para estudiantes de Ingeniería Civil Informática. Permite visualizar 
+**UniPlanner** es una aplicación móvil diseñada para estudiantes de Ingeniería Civil Informática. Permite visualizar
 el progreso curricular, simular escenarios académicos y gestionar evaluaciones con persistencia de datos local.
 
 Desarrollada con **Kotlin Multiplatform** y **Material 3**.
@@ -26,15 +26,18 @@ Desarrollada con **Kotlin Multiplatform** y **Material 3**.
 
 ## 4. Metodos de estudio
 - **Método Pomodoro Clásico 25/10**
-- **Método Pomodoro 50/10*** 
-- **Active Recall** 
+- **Método Pomodoro 50/10***
+- **Active Recall**
 - **Spaced Repetition**
 - **Rubber Ducking**
-- **Método Feynman** 
+- **Método Feynman**
 
 ### 5.  Ajustes y personalización
 - **Modo Oscuro:** Soporte para tema Claro/Oscuro en toda la aplicación.
 - **Gestión de Datos:** Opción de "Reiniciar Carrera" para borrar todo el historial académico y comenzar desde cero.
+
+## 6. Frases motivacionales 
+- Implementacion de frases para lograr levantar el animos.
 
 -----------------------------------------------------------------------------------------------------------
 
