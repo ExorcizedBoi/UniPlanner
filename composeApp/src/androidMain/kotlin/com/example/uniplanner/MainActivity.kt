@@ -18,7 +18,6 @@ class MainActivity : ComponentActivity() {
         val config = resources.configuration
         config.setLocale(locale)
         createConfigurationContext(config)
-        // ---------------------------
 
         setContent {
             App()

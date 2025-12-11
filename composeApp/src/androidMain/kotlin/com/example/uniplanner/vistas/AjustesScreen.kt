@@ -114,7 +114,7 @@ fun AjustesScreen(
 
             AjusteItem(
                 titulo = "Acerca de UniPlanner",
-                subtitulo = "Versión 1.0.0 - Proyecto de Título",
+                subtitulo = "Versión 1.0.0 - Proyecto evaluado de laboratorio",
                 icono = Icons.Filled.Info,
                 colorIcono = MaterialTheme.colorScheme.primary,
                 onClick = { }

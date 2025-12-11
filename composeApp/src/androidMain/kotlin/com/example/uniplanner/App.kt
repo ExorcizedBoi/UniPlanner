@@ -43,7 +43,7 @@ fun App() {
             drawerContent = {
                 ModalDrawerSheet {
                     Text(
-                        "UniPlanner Pro",
+                        "UniPlanner",
                         modifier = Modifier.padding(24.dp),
                         style = MaterialTheme.typography.headlineMedium,
                         color = MaterialTheme.colorScheme.primary
