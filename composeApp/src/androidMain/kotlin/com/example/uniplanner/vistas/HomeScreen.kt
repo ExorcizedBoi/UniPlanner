@@ -2,13 +2,14 @@ package com.example.uniplanner.vistas
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -35,6 +36,22 @@ fun HomeScreen(
     }
 
     val porcentajeAvance = if (totalCreditos > 0) creditosAprobados.toFloat() / totalCreditos.toFloat() else 0f
+
+    val listaFrases = remember {
+        listOf(
+            "El ayer es Historia, el Mañana es un misterio, pero el Hoy es un obsequio - Maestro Oogway",
+            "Si funciona, no lo toques",
+            "nunca te vayas a dormir pensando que hubiera pasado si, levantate, ve y hacelo - Gerónimo Benavides",
+            "El único código libre de errores es el que no se ha escrito.",
+            "los días malos son para que sepas valorar los buenos.",
+            "nunca te rindas loco...Hoy es dificil y mañana va a ser pero, pero pasado lo vas a disfruta - Joker",
+            "No todos los dias te vas a sentir de la mejor manera, pero recuerda que estas haciendo lo que puedes y debes estar orgulloso de eso",
+            "Cada dia sera mas facil, pero tienes que hacerlo todos los dias. Esa es la parte dificil",
+            "Para que vas a estudiar para una materia, si pensas en desaprobarla, Flaco el mundo es para los que se animan y creen que es posible - Gerónimo Benavides",
+        )
+    }
+
+    var fraseActual by remember { mutableStateOf(listaFrases.random()) }
 
     Scaffold(
         topBar = {
@@ -71,13 +88,8 @@ fun HomeScreen(
                 textAlign = TextAlign.Center
             )
 
-            Text(
-                text = "Gestión Académica Inteligente",
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-
-            Spacer(modifier = Modifier.height(32.dp))
+            Spacer(modifier = Modifier.height(12.dp))
+            // -------------------------------------------
 
             Card(
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
@@ -117,6 +129,31 @@ fun HomeScreen(
                         fontSize = 12.sp,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         modifier = Modifier.align(Alignment.End).padding(top = 6.dp)
+                    )
+                }
+            }
+            Spacer(modifier = Modifier.height(12.dp))
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center,
+                modifier = Modifier.fillMaxWidth().padding(bottom = 32.dp)
+            ) {
+                Text(
+                    text = fraseActual,
+                    style = MaterialTheme.typography.bodyMedium,
+                    fontStyle = FontStyle.Italic,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.weight(1f)
+                )
+                Spacer(modifier = Modifier.height(12.dp))
+                IconButton(
+                    onClick = { fraseActual = listaFrases.random() }
+                ) {
+                    Icon(
+                        Icons.Filled.Refresh,
+                        contentDescription = "Cambiar frase",
+                        tint = MaterialTheme.colorScheme.primary
                     )
                 }
             }
