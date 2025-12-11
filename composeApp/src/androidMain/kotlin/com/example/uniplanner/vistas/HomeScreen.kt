@@ -44,10 +44,10 @@ fun HomeScreen(
             "nunca te vayas a dormir pensando que hubiera pasado si, levantate, ve y hacelo - Gerónimo Benavides",
             "El único código libre de errores es el que no se ha escrito.",
             "los días malos son para que sepas valorar los buenos.",
-            "nunca te rindas loco...Hoy es dificil y mañana va a ser pero, pero pasado lo vas a disfruta - Joker",
+            "nunca te rindas loco...Hoy es difícil y mañana va a ser pero, pero pasado lo vas a disfruta - Joker",
             "No todos los dias te vas a sentir de la mejor manera, pero recuerda que estas haciendo lo que puedes y debes estar orgulloso de eso",
-            "Cada dia sera mas facil, pero tienes que hacerlo todos los dias. Esa es la parte dificil",
-            "Para que vas a estudiar para una materia, si pensas en desaprobarla, Flaco el mundo es para los que se animan y creen que es posible - Gerónimo Benavides",
+            "Cada dia sera mas fácil, pero tienes que hacerlo todos los dias. Esa es la parte difícil",
+            "Para que vas a estudiar para una materia, si pensás en desaprobarla, Flaco el mundo es para los que se animan y creen que es posible - Gerónimo Benavides",
         )
     }
 
@@ -89,8 +89,6 @@ fun HomeScreen(
             )
 
             Spacer(modifier = Modifier.height(12.dp))
-            // -------------------------------------------
-
             Card(
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
                 elevation = CardDefaults.cardElevation(4.dp),
