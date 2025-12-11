@@ -25,12 +25,12 @@ Desarrollada con **Kotlin Multiplatform** y **Material 3**.
 - Estimación de nota necesaria en examen para aprobar.
 
 ## 4. Metodos de estudio
-- **Método Pomodoro Clásico:** Trabaja 25 min, descansa 5. El estándar de oro para evitar la fatiga mental.
-- **Método Pomodoro 50/10:*** Trabaja 50 min, descansa 10. Ideal para tareas complejas o programación profunda, dando mayor inmersión con menos interrupciones.
-- **Active Recall:** No solo leas. Cierra el libro e intenta recordar y explicar lo aprendido. Es la forma más potente de memorizar.
-- **Spaced Repetition:** Repasa el contenido en un intervalo de dias (1 día, 3 días, 1 semana). Para asi combatir la curva del olvido.
-- **Rubber Ducking:** Explícale tu materia a un patito de goma (o cualquier objeto inanimado). Al expresar, encuentras los errores
-- **Método Feynman:** Intenta explicar lo que haz estudiado en términos tan simples que hasta un niño de 5 años lo entienda
+- **Método Pomodoro Clásico 25/10**
+- **Método Pomodoro 50/10*** 
+- **Active Recall** 
+- **Spaced Repetition**
+- **Rubber Ducking**
+- **Método Feynman** 
 
 ### 5.  Ajustes y personalización
 - **Modo Oscuro:** Soporte para tema Claro/Oscuro en toda la aplicación.
