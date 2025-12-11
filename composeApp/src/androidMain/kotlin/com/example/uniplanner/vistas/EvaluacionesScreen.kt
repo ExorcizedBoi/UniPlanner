@@ -73,7 +73,7 @@ fun EvaluacionesScreen(onMenuClick: () -> Unit) {
         ) {
             if (listaEvaluaciones.isEmpty()) {
                 Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    Text("No hay evaluaciones pendientes 🎉", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text("No hay evaluaciones pendientes", color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             } else {
                 LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp)) {
