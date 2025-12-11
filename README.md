@@ -9,7 +9,7 @@ Desarrollada con **Kotlin Multiplatform** y **Material 3**.
 
 ##  Características Principales
 
-### 1.  Malla Curricular Interactiva
+### 1.  Malla curricular Interactiva
 - **Visualización por Semestres:** Scroll horizontal fluido con diferenciación visual de ramos y hitos.
 - **Sistema de Estados:** Colores dinámicos para ramos Aprobados (Verde), Disponibles (Azul), Bloqueados (Gris) y Reprobados (Rojo).
 - **Modo Simulación:** Permite al estudiante marcar un ramo como "Reprobado" y el sistema calcula en tiempo real el "efecto dominó" hacia el futuro, marcando en rojo los ramos que se volverían imposibles de tomar.
