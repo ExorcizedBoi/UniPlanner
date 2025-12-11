@@ -32,7 +32,7 @@ fun AjustesScreen(
         snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             CenterAlignedTopAppBar(
-                title = { Text("Ajustes y Datos") },
+                title = { Text("Ajustes y datos") },
                 navigationIcon = {
                     IconButton(onClick = onMenuClick) {
                         Icon(Icons.Filled.Menu, contentDescription = "Menú")

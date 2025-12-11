@@ -41,7 +41,7 @@ fun CalculadoraScreen(
         topBar = {
             CenterAlignedTopAppBar(
                 title = {
-                    Text("Calculadora de Notas", fontWeight = FontWeight.Bold)
+                    Text("Calculadora de notas", fontWeight = FontWeight.Bold)
                 },
                 navigationIcon = {
                     IconButton(onClick = onMenuClick) {

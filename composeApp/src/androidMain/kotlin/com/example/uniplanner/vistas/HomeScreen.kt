@@ -64,7 +64,7 @@ fun HomeScreen(
             Spacer(modifier = Modifier.height(20.dp))
 
             Text(
-                text = "UniPlanner Pro",
+                text = "UniPlanner",
                 style = MaterialTheme.typography.headlineLarge,
                 color = MaterialTheme.colorScheme.primary,
                 fontWeight = FontWeight.Black,

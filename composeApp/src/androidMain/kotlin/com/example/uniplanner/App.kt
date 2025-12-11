@@ -9,6 +9,7 @@ import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Timer
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -18,13 +19,15 @@ import com.example.uniplanner.vistas.HomeScreen
 import com.example.uniplanner.vistas.MallaScreen
 import com.example.uniplanner.vistas.EvaluacionesScreen
 import com.example.uniplanner.vistas.AjustesScreen
+import com.example.uniplanner.vistas.MetodosEstudioScreen
 import kotlinx.coroutines.launch
 
 enum class Pantalla {
     HOME,
     EVALUACIONES,
-    CALCULADORA,
     MALLA,
+    METODOS,
+    CALCULADORA,
     AJUSTES
 }
 
@@ -75,7 +78,7 @@ fun App() {
                     HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
 
                     NavigationDrawerItem(
-                        label = { Text("Malla Interactiva") },
+                        label = { Text("Malla interactiva") },
                         selected = pantallaActual == Pantalla.MALLA,
                         icon = { Icon(Icons.Filled.List, null) },
                         onClick = {
@@ -86,7 +89,18 @@ fun App() {
                     )
 
                     NavigationDrawerItem(
-                        label = { Text("Calculadora Notas") },
+                        label = { Text("Zona de estudio") },
+                        selected = pantallaActual == Pantalla.METODOS,
+                        icon = { Icon(Icons.Filled.Timer, null) },
+                        onClick = {
+                            pantallaActual = Pantalla.METODOS
+                            scope.launch { drawerState.close() }
+                        },
+                        modifier = Modifier.padding(NavigationDrawerItemDefaults.ItemPadding)
+                    )
+
+                    NavigationDrawerItem(
+                        label = { Text("Calculadora de notas") },
                         selected = pantallaActual == Pantalla.CALCULADORA,
                         icon = { Icon(Icons.Filled.Calculate, null) },
                         onClick = {
@@ -99,6 +113,7 @@ fun App() {
                     Spacer(modifier = Modifier.weight(1f))
                     HorizontalDivider()
 
+                    // 6. AJUSTES
                     NavigationDrawerItem(
                         label = { Text("Ajustes") },
                         selected = pantallaActual == Pantalla.AJUSTES,
@@ -120,8 +135,9 @@ fun App() {
                 when (pantallaActual) {
                     Pantalla.HOME -> HomeScreen(onMenuClick = { scope.launch { drawerState.open() } })
                     Pantalla.EVALUACIONES -> EvaluacionesScreen(onMenuClick = { scope.launch { drawerState.open() } })
-                    Pantalla.CALCULADORA -> CalculadoraScreen(onMenuClick = { scope.launch { drawerState.open() } })
                     Pantalla.MALLA -> MallaScreen(onMenuClick = { scope.launch { drawerState.open() } })
+                    Pantalla.METODOS -> MetodosEstudioScreen(onMenuClick = { scope.launch { drawerState.open() } }) // Nuevo Case
+                    Pantalla.CALCULADORA -> CalculadoraScreen(onMenuClick = { scope.launch { drawerState.open() } })
                     Pantalla.AJUSTES -> AjustesScreen(
                         onMenuClick = { scope.launch { drawerState.open() } },
                         esOscuro = esOscuro,

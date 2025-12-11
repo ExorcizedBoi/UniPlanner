@@ -40,7 +40,7 @@ fun EvaluacionesScreen(onMenuClick: () -> Unit) {
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
-                title = { Text("Mis Evaluaciones", fontWeight = FontWeight.Bold) },
+                title = { Text("Mis evaluaciones", fontWeight = FontWeight.Bold) },
                 navigationIcon = {
                     IconButton(onClick = onMenuClick) {
                         Icon(Icons.Filled.Menu, contentDescription = "Menú")
@@ -66,6 +66,7 @@ fun EvaluacionesScreen(onMenuClick: () -> Unit) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .padding(padding)
                 .padding(padding)
                 // CORRECCIÓN: Fondo dinámico
                 .background(MaterialTheme.colorScheme.background)

@@ -75,7 +75,7 @@ fun MallaScreen(
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
-                title = { Text("Malla Curricular", fontWeight = FontWeight.Bold) },
+                title = { Text("Malla curricular", fontWeight = FontWeight.Bold) },
                 navigationIcon = {
                     IconButton(onClick = onMenuClick) {
                         Icon(Icons.Filled.Menu, contentDescription = "Menú")
@@ -129,7 +129,7 @@ fun MallaScreen(
                 Spacer(Modifier.width(8.dp))
                 LeyendaItem(Color.Gray, "Bloqueado")
                 Spacer(Modifier.width(8.dp))
-                LeyendaItem(Color.Red, "IMPOSIBLE")
+                LeyendaItem(Color.Red, "Imposible")
             }
 
             LazyRow(
