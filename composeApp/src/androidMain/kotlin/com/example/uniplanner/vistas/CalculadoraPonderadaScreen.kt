@@ -5,6 +5,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -24,7 +26,7 @@ data class FilaNota(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CalculadoraScreen(
-    irAHome: () -> Unit
+    onMenuClick: () -> Unit // Recibimos la acción del menú
 ) {
     var listaNotas by remember {
         mutableStateOf(listOf(FilaNota(1), FilaNota(2), FilaNota(3)))
@@ -40,6 +42,11 @@ fun CalculadoraScreen(
             CenterAlignedTopAppBar(
                 title = {
                     Text("Calculadora de Notas", fontWeight = FontWeight.Bold)
+                },
+                navigationIcon = {
+                    IconButton(onClick = onMenuClick) {
+                        Icon(Icons.Filled.Menu, contentDescription = "Menú")
+                    }
                 },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
@@ -204,12 +211,7 @@ fun CalculadoraScreen(
                 }
             }
 
-            OutlinedButton(
-                onClick = irAHome,
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text("Volver al Inicio")
-            }
+            // ELIMINADO: Botón "Volver al Inicio" (ya no se usa)
         }
     }
 }
