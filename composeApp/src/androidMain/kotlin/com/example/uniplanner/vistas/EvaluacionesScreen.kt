@@ -68,7 +68,6 @@ fun EvaluacionesScreen(onMenuClick: () -> Unit) {
                 .fillMaxSize()
                 .padding(padding)
                 .padding(padding)
-                // CORRECCIÓN: Fondo dinámico
                 .background(MaterialTheme.colorScheme.background)
                 .padding(16.dp)
         ) {
