@@ -6,8 +6,11 @@ class Modulos(
     val creditosRequeridos: Int,
     prerrequisitos: List<String>,
     val semestre: Int
-) : RequisitosAcademicos(id, nombre, prerrequisitos) {
-
+) : RequisitosAcademicos(
+    id,
+    nombre,
+    prerrequisitos
+) {
     override fun calcularEstado(historial: List<Resultado>): EstadoMateria {
         val creditosAcumulados = historial.filter { it.aprobado }.size * 5
 

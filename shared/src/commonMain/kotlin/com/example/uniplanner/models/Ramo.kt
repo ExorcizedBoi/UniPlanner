@@ -7,7 +7,11 @@ class Ramo(
     val esAnual: Boolean,
     prerrequisitos: List<String> = emptyList(),
     val semestre: Int
-) : RequisitosAcademicos(id, nombre, prerrequisitos) {
+) : RequisitosAcademicos(
+    id,
+    nombre,
+    prerrequisitos
+) {
 
     override fun calcularEstado(historial: List<Resultado>): EstadoMateria {
         val resultado = historial.find { it.idMateria == id }
